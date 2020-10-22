@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Generated with glade 3.38.1 -->
+<interface>
+  <requires lib="gtk+" version="3.24"/>
+  <!-- interface-css-provider-path style.css -->
+  <template class="MonocotsWindow" parent="GtkApplicationWindow">
+    <property name="width-request">600</property>
+    <property name="height-request">400</property>
+    <property name="can-focus">False</property>
+    <property name="title" translatable="yes">Starting LibreOffice ...</property>
+    <property name="window-position">center-always</property>
+    <property name="default-width">900</property>
+    <property name="default-height">600</property>
+    <property name="icon-name">libreoffice</property>
+    <child>
+      <object class="GtkOverlay" id="ovl_main">
+        <property name="visible">True</property>
+        <property name="can-focus">False</property>
+        <child>
+          <object class="GtkFrame" id="frm_splash">
+            <property name="visible">True</property>
+            <property name="can-focus">False</property>
+            <property name="label-xalign">0</property>
+            <property name="shadow-type">none</property>
+            <signal name="event-after" handler="on_frm_splash_event_after" swapped="no"/>
+            <child>
+              <object class="GtkImage" id="img_splash">
+                <property name="visible">True</property>
+                <property name="can-focus">False</property>
+                <property name="pixel-size">100</property>
+                <property name="icon-name">libreoffice</property>
+              </object>
+            </child>
+            <child type="label_item">
+              <placeholder/>
+            </child>
+            <style>
+              <class name="background"/>
+            </style>
+          </object>
+          <packing>
+            <property name="index">-1</property>
+          </packing>
+        </child>
+      </object>
+    </child>
+    <style>
+      <class name="splash"/>
+    </style>
+  </template>
+</interface>
